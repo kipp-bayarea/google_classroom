@@ -196,7 +196,8 @@ class EndPoint:
                     remaining_requests.append(same_request)
                     nonlocal quota_exceeded
                     quota_exceeded = True
-                logging.debug(exception)
+                else:
+                    logging.debug(exception)
                 return
 
             if "warnings" in response:
